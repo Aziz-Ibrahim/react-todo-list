@@ -28,18 +28,26 @@ function App() {
   return (
     <div className="App">
       <h2>To Do List</h2>
-      <div className='todo-container'>
+      <div className="todo-container">
         <ul>
-          {todos.map(({text, completed}, index) => {
-            return <div className='item'>
-              <li className={completed ? "done" : ""} onClick={() => handleItemDone(index)}>
-                {text}
-              </li>
-              <span className='delete' onClick={() => handleDeleteItem(index)}>❌</span>
+          {todos.map(({ text, completed }, index) => {
+            return (
+              <div className="item">
+                <li
+                  className={completed ? "done" : ""}
+                  key={index}
+                  onClick={() => handleItemDone(index)}
+                >
+                  {text}
+                </li>
+                <span onClick={() => handleDeleteItem(index)} className="del">
+                  ❌
+                </span>
               </div>
+            );
           })}
         </ul>
-        <input ref={inputRef} placeholder='Enter item...'/>
+        <input ref={inputRef} placeholder="Enter item..." />
         <button onClick={handleAddTodo}>Add</button>
       </div>
     </div>

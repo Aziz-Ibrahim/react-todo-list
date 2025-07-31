@@ -1,5 +1,5 @@
 .App {
-  border: 1px solid #3d3d3d;
+  border: 1px solid #5d4646;
   margin: 50px 30px;
   padding: 25px 15px;
   border-radius: 10px;
@@ -38,7 +38,7 @@
   color: #A9A9A9;
 }
 
-.delete {
+.del {
   cursor: pointer;
 }
 
